@@ -23,14 +23,13 @@ type Coordinate [2]int
 type Snake []Coordinate
 
 var grid Grid
-var snake Snake = make(Snake, 3)
+var snake Snake
 var score int = 0
 var speed int = 10
 
 var food *Coordinate
 
 type Direction int
-type GameStatus int
 
 const (
 	UP Direction = iota
@@ -38,6 +37,8 @@ const (
 	DOWN
 	LEFT
 )
+
+type GameStatus int
 
 const (
 	LIVE GameStatus = iota
