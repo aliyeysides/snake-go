@@ -100,19 +100,19 @@ func UpdateScore() {
 }
 
 func DetectKeyPress() {
-	if rl.IsKeyPressed(rl.KeyUp) && direction != DOWN {
+	if rl.IsKeyPressed(rl.KeyUp) || rl.IsKeyPressed(rl.KeyW) && direction != DOWN {
 		nextDirection = UP
 	}
 
-	if rl.IsKeyPressed(rl.KeyRight) && direction != LEFT {
+	if rl.IsKeyPressed(rl.KeyRight) || rl.IsKeyPressed(rl.KeyD) && direction != LEFT {
 		nextDirection = RIGHT
 	}
 
-	if rl.IsKeyPressed(rl.KeyDown) && direction != UP {
+	if rl.IsKeyPressed(rl.KeyDown) || rl.IsKeyPressed(rl.KeyS) && direction != UP {
 		nextDirection = DOWN
 	}
 
-	if rl.IsKeyPressed(rl.KeyLeft) && direction != RIGHT {
+	if rl.IsKeyPressed(rl.KeyLeft) || rl.IsKeyPressed(rl.KeyA) && direction != RIGHT {
 		nextDirection = LEFT
 	}
 }
