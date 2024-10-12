@@ -8,7 +8,7 @@ import (
 	rl "github.com/gen2brain/raylib-go/raylib"
 )
 
-const screenWidth int = 800
+const screenWidth int = 500
 const screenHeight int = 500
 
 const cellHeight int32 = 25
@@ -261,13 +261,10 @@ func DrawBoard(s *Snake) {
 	}
 }
 
-func DrawScore() {
-	rl.DrawText(fmt.Sprint("Score: ", score), int32(gridCols)*cellWidth+cellWidth, 10, 24, rl.Green)
-}
-
 func GameOver() {
-	rl.DrawText(fmt.Sprint("Game Over!"), int32(screenWidth)/2-100, int32(screenHeight)/2-100, 36, rl.Red)
-	rl.DrawText(fmt.Sprint("press Enter to restart"), int32(screenWidth)/2-150, int32(screenHeight)/2-50, 24, rl.Red)
+	rl.DrawText(fmt.Sprint("Game Over!"), int32(screenWidth)/2-100, int32(screenHeight)/2-100, 36, rl.Yellow)
+	rl.DrawText(fmt.Sprint("Score: ", score), int32(screenWidth)/2-50, int32(screenHeight)/2-50, 24, rl.Yellow)
+	rl.DrawText(fmt.Sprint("press Enter to restart"), int32(screenWidth)/2-150, int32(screenHeight)/2, 24, rl.Yellow)
 }
 
 func RestartGame() {
@@ -298,7 +295,6 @@ func GameLoop(s *Snake, frameCounter *int) {
 		RestartGame()
 	}
 
-	DrawScore()
 }
 
 func main() {
