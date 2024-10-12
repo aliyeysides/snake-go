@@ -113,6 +113,14 @@ func DetectKeyPress() {
 	if (rl.IsKeyPressed(rl.KeyLeft) || rl.IsKeyPressed(rl.KeyA)) && direction != RIGHT {
 		nextDirection = LEFT
 	}
+
+	if rl.IsKeyPressed(rl.KeySpace) {
+		if gameStatus == LIVE {
+			gameStatus = PAUSED
+		} else {
+			gameStatus = LIVE
+		}
+	}
 }
 
 func IsFoodSquare(square Coordinate) bool {
