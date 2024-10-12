@@ -57,13 +57,11 @@ var direction Direction = RIGHT
 var nextDirection Direction = RIGHT
 var gameStatus GameStatus = LIVE
 
-func InitSnake() Snake {
+func InitSnake() {
 	snake = make(Snake, 3)
 	snake[0] = Coordinate{1, 1}
 	snake[1] = Coordinate{1, 2}
 	snake[2] = Coordinate{1, 3}
-
-	return snake
 }
 
 func SetFood() {
@@ -272,7 +270,7 @@ func RestartGame() {
 		gameStatus = LIVE
 		direction = RIGHT
 		nextDirection = RIGHT
-		snake = InitSnake()
+		InitSnake()
 		food = nil
 		SetFood()
 		score = 0
