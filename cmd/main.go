@@ -94,7 +94,7 @@ func SetSpeed() {
 }
 
 func UpdateScore() {
-	score += 10
+	score += 1
 	SetSpeed()
 }
 
@@ -271,7 +271,7 @@ func DrawBoard(s *Snake) {
 func GameOver() {
 	rl.DrawText(fmt.Sprint("Game Over!"), int32(screenWidth)/2-100, int32(screenHeight)/2-100, 36, rl.Yellow)
 	rl.DrawText(fmt.Sprint("Score: ", score), int32(screenWidth)/2-50, int32(screenHeight)/2-50, 24, rl.Yellow)
-	rl.DrawText(fmt.Sprint("press Enter to restart"), int32(screenWidth)/2-150, int32(screenHeight)/2, 24, rl.Yellow)
+	rl.DrawText(fmt.Sprint("press Enter to restart"), int32(screenWidth)/2-145, int32(screenHeight)/2, 24, rl.Yellow)
 }
 
 func RestartGame() {
