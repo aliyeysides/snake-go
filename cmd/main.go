@@ -210,11 +210,11 @@ func DrawSquare(offsetX int32, offsetY int32, color color.RGBA) {
 }
 
 func DrawEmptySquare(offsetX int32, offsetY int32) {
-	DrawSquare(offsetX, offsetY, rl.White)
+	DrawSquare(offsetX, offsetY, rl.Black)
 }
 
 func DrawSnakeSquare(offsetX int32, offsetY int32) {
-	DrawSquare(offsetX, offsetY, rl.Black)
+	DrawSquare(offsetX, offsetY, rl.Green)
 }
 
 func DrawFoodSquare(offsetX int32, offsetY int32) {
